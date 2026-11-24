@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sheeza Ahsan — CV</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+        background: #fbfaf7;
+        color: #1a2233;
+        font-size: 8.7pt;
+        line-height: 1.55;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 13mm 14mm 11mm;
+        background: #fbfaf7;
+        overflow: hidden;
+      }
+
+      .topline {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2.2mm;
+        background: linear-gradient(90deg, #164bc4, #6d5bff 55%, #9a7bff);
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 8mm;
+        padding-bottom: 5.5mm;
+        border-bottom: 1px solid #d9d4ca;
+      }
+
+      .kicker {
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.6pt;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: #1f5be0;
+      }
+
+      h1 {
+        margin-top: 2.5mm;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 37pt;
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: -0.035em;
+        color: #0d1526;
+      }
+
+      h1 em {
+        font-style: italic;
+        color: #1f5be0;
+      }
+
+      .role {
+        margin-top: 3mm;
+        font-size: 8.2pt;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #4b5568;
+      }
+
+      .role span {
+        color: #b8a888;
+        margin-inline: 1.4mm;
+      }
+
+      .contact {
+        list-style: none;
+        align-self: end;
+        display: grid;
+        gap: 1.4mm;
+      }
+
+      .contact li {
+        display: grid;
+        grid-template-columns: 17mm 1fr;
+        gap: 2mm;
+        font-size: 7.9pt;
+        color: #2a3346;
+      }
+
+      .contact li span {
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.1pt;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: #8a8f9a;
+        padding-top: 0.5mm;
+      }
+
+      .profile {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: 8mm;
+        padding: 5mm 0 5.5mm;
+        border-bottom: 1px solid #d9d4ca;
+      }
+
+      .profile p {
+        font-size: 9pt;
+        line-height: 1.62;
+        color: #28324a;
+      }
+
+      .profile-side {
+        display: grid;
+        gap: 2mm;
+        align-content: start;
+      }
+
+      .flag {
+        display: flex;
+        align-items: center;
+        gap: 1.8mm;
+        padding: 2.2mm 3mm;
+        border: 1px solid #d8e0f5;
+        border-radius: 2mm;
+        background: #f1f5ff;
+        font-size: 7.7pt;
+        color: #1f3f8f;
+      }
+
+      .flag i {
+        width: 1.6mm;
+        height: 1.6mm;
+        border-radius: 50%;
+        background: #2f9e6f;
+        box-shadow: 0 0 0 1mm rgba(47, 158, 111, 0.16);
+      }
+
+      .columns {
+        display: grid;
+        grid-template-columns: 57mm 1fr;
+        gap: 7mm;
+        padding-top: 5.5mm;
+      }
+
+      .col-right {
+        border-left: 1px solid #e2ddd3;
+        padding-left: 7mm;
+      }
+
+      section + section {
+        margin-top: 5.2mm;
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        gap: 2.5mm;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.7pt;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #1f5be0;
+        margin-bottom: 2.4mm;
+      }
+
+      h2::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #e2ddd3;
+      }
+
+      .edu h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 11pt;
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: -0.01em;
+        color: #111a2c;
+      }
+
+      .edu .school {
+        margin-top: 1.4mm;
+        font-size: 7.9pt;
+        color: #4a5468;
+      }
+
+      .edu .meta {
+        margin-top: 1.6mm;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.4pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8a8f9a;
+      }
+
+      .edu .meta b {
+        color: #1f5be0;
+        font-weight: 700;
+      }
+
+      .skill-group {
+        margin-bottom: 2.7mm;
+      }
+
+      .skill-group h3 {
+        font-size: 7.2pt;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: #1a2233;
+      }
+
+      .skill-group p {
+        margin-top: 0.5mm;
+        font-size: 7.6pt;
+        line-height: 1.55;
+        color: #5a6376;
+      }
+
+      .cert-list {
+        display: grid;
+        gap: 2.2mm;
+      }
+
+      .cert {
+        padding-left: 3mm;
+        border-left: 1.2px solid #c9d6f5;
+      }
+
+      .cert h3 {
+        font-size: 7.5pt;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #1a2233;
+      }
+
+      .cert p {
+        font-size: 6.9pt;
+        color: #7b8291;
+        margin-top: 0.2mm;
+      }
+
+      .soft {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2mm;
+        font-size: 7.4pt;
+        color: #4a5468;
+      }
+
+      .soft li {
+        list-style: none;
+        display: flex;
+        gap: 1.6mm;
+        align-items: flex-start;
+      }
+
+      .soft li::before {
+        content: "—";
+        color: #1f5be0;
+        font-size: 7pt;
+        line-height: 1.55;
+      }
+
+      .project {
+        position: relative;
+        padding: 3.4mm 4mm 3.4mm 4.4mm;
+        border: 1px solid #e4dfd5;
+        border-radius: 2mm;
+        background: #ffffff;
+      }
+
+      .project + .project {
+        margin-top: 3mm;
+      }
+
+      .project-top {
+        display: flex;
+        align-items: baseline;
+        gap: 2.6mm;
+      }
+
+      .project-index {
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.2pt;
+        letter-spacing: 0.12em;
+        color: #1f5be0;
+      }
+
+      .project h3 {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 12pt;
+        font-weight: 400;
+        letter-spacing: -0.015em;
+        color: #111a2c;
+      }
+
+      .project .category {
+        margin-left: auto;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 5.9pt;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #8a8f9a;
+      }
+
+      .project p {
+        margin-top: 1.6mm;
+        font-size: 7.7pt;
+        line-height: 1.55;
+        color: #5a6376;
+      }
+
+      .project .stack {
+        margin-top: 2mm;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2mm;
+      }
+
+      .project .stack span {
+        padding: 0.7mm 1.8mm;
+        border: 1px solid #e0dccf;
+        border-radius: 1mm;
+        background: #faf8f3;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 5.9pt;
+        color: #5a6376;
+      }
+
+      .project .live {
+        margin-top: 2mm;
+        display: inline-flex;
+        align-items: center;
+        gap: 1.4mm;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.4pt;
+        letter-spacing: 0.03em;
+        color: #1f5be0;
+        text-decoration: none;
+        border-bottom: 0.5px solid #c9d6f5;
+      }
+
+      .project .live::before {
+        content: "↗";
+        font-size: 7pt;
+      }
+
+      .strengths {
+        display: grid;
+        gap: 1.6mm;
+        list-style: none;
+      }
+
+      .strengths li {
+        display: flex;
+        gap: 2mm;
+        font-size: 7.8pt;
+        line-height: 1.5;
+        color: #4a5468;
+      }
+
+      .strengths li::before {
+        content: "—";
+        color: #1f5be0;
+        font-size: 7pt;
+        line-height: 1.55;
+      }
+
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4mm;
+        margin-top: 6mm;
+        padding-top: 3mm;
+        border-top: 1px solid #d9d4ca;
+        font-family: Consolas, "Courier New", monospace;
+        font-size: 6.1pt;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #9298a4;
+      }
+
+      footer strong {
+        color: #1f5be0;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topline"></div>
+
+      <header>
+        <div>
+          <p class="kicker">Curriculum Vitae / 2026</p>
+          <h1>Sheeza <em>Ahsan</em></h1>
+          <p class="role">Full-Stack Developer <span>·</span> IT Undergraduate</p>
+        </div>
+
+        <ul class="contact">
+          <li><span>Location</span> Multan, Punjab, Pakistan</li>
+          <li><span>Email</span> sheezaahsan2045@gmail.com</li>
+          <li><span>Phone</span> 0334 8551212</li>
+          <li><span>GitHub</span> github.com/sheezaahsan-sa</li>
+          <li><span>LinkedIn</span> linkedin.com/in/shiza-r-422242343</li>
+        </ul>
+      </header>
+
+      <div class="profile">
+        <div>
+          <p>
+            Dedicated Information Technology undergraduate in the 7th semester with a strong
+            foundation in programming, software development, and modern web technologies.
+            Experienced in building frontend and full-stack applications through hands-on project
+            work, with a keen interest in efficient, scalable, and user-centric solutions.
+            Demonstrates analytical thinking, adaptability, and a commitment to continuous
+            learning.
+          </p>
+        </div>
+        <div class="profile-side">
+          <div class="flag"><i></i> Open to internship and junior developer roles</div>
+          <div class="flag"><i></i> Available for collaborative web projects</div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="col-left">
+          <section class="edu">
+            <h2>Education</h2>
+            <h3>Bachelor of Science in Information Technology</h3>
+            <p class="school">Muhammad Nawaz Sharif Agriculture University Multan</p>
+            <p class="meta">2023 — 2027 · <b>In progress</b> · 7th semester</p>
+          </section>
+
+          <section>
+            <h2>Technical Skills</h2>
+
+            <div class="skill-group">
+              <h3>Programming Languages</h3>
+              <p>C++ · Python · JavaScript</p>
+            </div>
+            <div class="skill-group">
+              <h3>Frontend</h3>
+              <p>HTML5 · CSS3 · Tailwind CSS · React.js · Vite</p>
+            </div>
+            <div class="skill-group">
+              <h3>Backend</h3>
+              <p>Node.js · Express.js · Next.js</p>
+            </div>
+            <div class="skill-group">
+              <h3>Databases</h3>
+              <p>SQL · MongoDB · PostgreSQL · Supabase</p>
+            </div>
+            <div class="skill-group">
+              <h3>Full-Stack</h3>
+              <p>MERN Stack</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Certifications</h2>
+            <div class="cert-list">
+              <div class="cert">
+                <h3>Foundation of Cybersecurity</h3>
+                <p>MNSUAM</p>
+              </div>
+              <div class="cert">
+                <h3>Network Essentials</h3>
+                <p>MNSUAM</p>
+              </div>
+              <div class="cert">
+                <h3>Full-Stack Web Development with AI</h3>
+                <p>PNY Trainings, Multan</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Soft Skills</h2>
+            <ul class="soft">
+              <li>Communication Skills</li>
+              <li>Problem-Solving</li>
+              <li>Time Management</li>
+              <li>Punctuality and Reliability</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="col-right">
+          <section>
+            <h2>Selected Projects</h2>
+
+            <div class="project">
+              <div class="project-top">
+                <span class="project-index">01</span>
+                <h3>Dribbble Clone</h3>
+                <span class="category">Full-Stack Web Application</span>
+              </div>
+              <p>
+                A collaborative full-stack web application inspired by Dribbble, designed to
+                showcase a modern creative platform experience.
+              </p>
+              <div class="stack">
+                <span>Next.js</span><span>React</span><span>Tailwind CSS</span
+                ><span>Supabase</span><span>PostgreSQL</span>
+              </div>
+              <a class="live" href="https://dribbble-clone-fawn.vercel.app/"
+                >dribbble-clone-fawn.vercel.app</a
+              >
+            </div>
+
+            <div class="project">
+              <div class="project-top">
+                <span class="project-index">02</span>
+                <h3>Roast Co.</h3>
+                <span class="category">Frontend Website Clone</span>
+              </div>
+              <p>
+                A responsive frontend website inspired by Roast Co., built to deliver an
+                attractive and modern website experience.
+              </p>
+              <div class="stack">
+                <span>React.js</span><span>Tailwind CSS</span><span>Vite</span>
+              </div>
+              <a class="live" href="https://roastco.vercel.app/">roastco.vercel.app</a>
+            </div>
+
+            <div class="project">
+              <div class="project-top">
+                <span class="project-index">03</span>
+                <h3>Shah Wear</h3>
+                <span class="category">Online Shopping Website</span>
+              </div>
+              <p>
+                An online shopping website frontend featuring a user-friendly interface and a
+                modern shopping experience, implemented with core web technologies.
+              </p>
+              <div class="stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a class="live" href="https://shahwear.vercel.app/">shahwear.vercel.app</a>
+            </div>
+          </section>
+
+          <section>
+            <h2>What I Bring</h2>
+            <ul class="strengths">
+              <li>Hands-on full-stack project experience across frontend and backend</li>
+              <li>Analytical, structured approach to solving problems</li>
+              <li>Adaptable, reliable, and committed to continuous learning</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <footer>
+        <span><strong>Open to opportunities</strong> · Multan, Pakistan</span>
+        <span>Sheeza Ahsan · Full-Stack Developer</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheeza Ahsan — Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Sheeza Ahsan is a full-stack developer and IT undergraduate in Multan, Pakistan, building modern, responsive web applications with React, Next.js, Node.js, and the MERN stack."
+    />
+    <meta name="author" content="Sheeza Ahsan" />
+    <meta
+      name="keywords"
+      content="Sheeza Ahsan, full-stack developer, frontend developer, React developer, Next.js, MERN stack, Multan, Pakistan, IT undergraduate, portfolio"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#05060a" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sheeza Ahsan — Portfolio" />
+    <meta property="og:title" content="Sheeza Ahsan — Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer and IT undergraduate. Modern, responsive web applications built with React, Next.js, Node.js, and the MERN stack."
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:image" content="/og-cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Sheeza Ahsan — Full-Stack Developer portfolio hero"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sheeza Ahsan — Full-Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Full-stack developer and IT undergraduate building modern, responsive web applications."
+    />
+    <meta name="twitter:image" content="/og-cover.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("sa-theme");
+          if (saved === "light" || saved === "dark") {
+            document.documentElement.dataset.theme = saved;
+            document
+              .querySelector('meta[name="theme-color"]')
+              .setAttribute("content", saved === "light" ? "#f5f6fb" : "#05060a");
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sheeza Ahsan",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Full-stack developer and Information Technology undergraduate based in Multan, Pakistan.",
+        "email": "mailto:sheezaahsan2045@gmail.com",
+        "telephone": "+923348551212",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Multan",
+          "addressRegion": "Punjab",
+          "addressCountry": "PK"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Muhammad Nawaz Sharif Agriculture University Multan"
+        },
+        "url": "https://github.com/sheezaahsan-sa/",
+        "sameAs": [
+          "https://github.com/sheezaahsan-sa/",
+          "https://www.linkedin.com/in/shiza-r-422242343"
+        ],
+        "knowsAbout": [
+          "Full-Stack Development",
+          "React.js",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "Tailwind CSS",
+          "MongoDB",
+          "PostgreSQL",
+          "Supabase",
+          "MERN Stack"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
